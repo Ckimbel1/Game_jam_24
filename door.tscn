@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bolofymmtawxj"]
+
+[ext_resource type="Texture2D" uid="uid://di2snnsf5mkf6" path="res://TrashDoor.png" id="1_4cp64"]
+[ext_resource type="Script" path="res://door.gd" id="1_7wb5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6oe7"]
+size = Vector2(226, 330)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("1_7wb5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(33.5, -62)
+scale = Vector2(1.20938, 1.3875)
+texture = ExtResource("1_4cp64")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(31, -7)
+shape = SubResource("RectangleShape2D_f6oe7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://lwwmbq6bi3nl"]
+
+[ext_resource type="Texture2D" uid="uid://x6lcyi8l7a3l" path="res://TV_Docile.png" id="1_8uyu1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc3uo"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(72, 53)
+shape = SubResource("RectangleShape2D_jc3uo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="TvDocile" type="Sprite2D" parent="."]
+position = Vector2(73, 53)
+scale = Vector2(0.0851563, 0.0625)
+texture = ExtResource("1_8uyu1")

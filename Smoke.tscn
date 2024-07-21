@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://caiq2d6litwwb"]
+
+[ext_resource type="Texture2D" uid="uid://bdu8rso3wkmis" path="res://Sprite-0014.png" id="1_rp48c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_75ddx"]
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+process_material = SubResource("ShaderMaterial_75ddx")
+texture = ExtResource("1_rp48c")
