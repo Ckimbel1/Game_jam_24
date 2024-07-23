@@ -4,7 +4,7 @@ extends CharacterBody2D
 #var velocity = Vector2()
 var speed = 400
 var gravity = 500
-var jump_force = -400
+var jump_force = -800
 
 
 
@@ -17,7 +17,6 @@ var jump_force = -400
 func _physics_process(delta):
 	# Apply gravity
 	velocity.y += gravity * delta
-
 	#Get input direction
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction == -1:
@@ -28,7 +27,7 @@ func _physics_process(delta):
 			velocity.x = direction * speed
 			if is_on_floor():
 				anim.play("Walk")
-	else:
+	else: 
 		velocity.x = 0
 		if is_on_floor():
 			anim.play("Idle")
